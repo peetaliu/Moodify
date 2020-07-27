@@ -1,8 +1,9 @@
 import axios from 'axios'
+const baseURL = 'http://localhost:3001/api/spotify'
 
 const auth = async () => {
-  const req = await axios.get('/auth')
-  console.log('Auth: ', req.data)
+  const req = await axios.get(`${baseURL}/auth`)
+  console.log(req.data)
   return req.data
 }
 

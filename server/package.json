@@ -18,6 +18,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "js-base64": "^3.2.4",
+    "jsonwebtoken": "^8.5.1",
     "session-file-store": "^1.4.0"
   },
   "devDependencies": {

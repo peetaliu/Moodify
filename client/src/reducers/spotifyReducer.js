@@ -11,7 +11,7 @@ const spotifyReducer = (state = [], action) => {
 
 export const createRecs = moodObj => {
   return async dispatch => {
-    const recs = await spotifyService.getRecs()
+    const recs = await spotifyService.getRecs(moodObj)
     dispatch({
       type: 'NEW_RECS',
       data: recs,

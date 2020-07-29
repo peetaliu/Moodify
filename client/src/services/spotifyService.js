@@ -8,7 +8,7 @@ const auth = async () => {
 }
 
 const getRecs = async moodObj => {
-  const req = await axios.post('/rec', moodObj)
+  const req = await axios.post(`${baseURL}/recs`, moodObj)
   console.log('Recommendations: ', req.data)
   return req.data
 }

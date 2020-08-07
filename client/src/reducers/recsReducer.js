@@ -1,6 +1,6 @@
 import spotifyService from '../services/spotifyService'
 
-const spotifyReducer = (state = [], action) => {
+const recsReducer = (state = [], action) => {
   switch (action.type) {
     case 'NEW_RECS':
       return action.data
@@ -19,4 +19,4 @@ export const createRecs = moodObj => {
   }
 }
 
-export default spotifyReducer
+export default recsReducer

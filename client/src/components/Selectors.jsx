@@ -50,7 +50,7 @@ const Selectors = props => {
   }
 
   return (
-    <div>
+    <div id='selectors'>
       <Typography>Happiness</Typography>
       <Slider
         defaultValue={5}
@@ -96,7 +96,7 @@ const Selectors = props => {
       <div>
         <FormControl component='fieldset'>
           <FormLabel component='legend'>Genres - Select up to 5</FormLabel>
-          <FormGroup>
+          <FormGroup className='genreBoxes'>
             {popGenres.map(g => (
               <FormControlLabel
                 key={g}

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import './App.css'
 import { authenticate } from './reducers/authReducer'
 import { getPop } from './reducers/genreReducer'
 import Selectors from './components/Selectors'

@@ -6,23 +6,29 @@ const TrackList = props => {
   return (
     <div id='trackList'>
       <Container>
-        <Row xl={10} lg={5} sm={2} xs={2}>
+        <Row xl={10} lg={5} md={4} xs={2}>
           {props.recs.tracks &&
             props.recs.tracks.map(t => (
               <Col key={t.id}>
-                <Card>
-                  <Card.Body>
-                    <Card.Title>{t.name}</Card.Title>
-                    {t.artists.map(a => (
-                      <Card.Subtitle key={a.id}>{a.name}</Card.Subtitle>
-                    ))}
-                  </Card.Body>
-                </Card>
+                <a
+                  href={t.external_urls.spotify}
+                  target='_blank'
+                  rel='noopener noreferrer'>
+                  <Card>
+                    <Card.Img src={t.album.images[1].url} />
+                    <Card.Body>
+                      <Card.Title>{t.name}</Card.Title>
+                      {t.artists.map(a => (
+                        <Card.Subtitle key={a.id}>{a.name}</Card.Subtitle>
+                      ))}
+                    </Card.Body>
+                  </Card>
+                </a>
               </Col>
             ))}
         </Row>
       </Container>
-      {console.log(props.recs.tracks)}
+      {console.log(props.recs)}
     </div>
   )
 }

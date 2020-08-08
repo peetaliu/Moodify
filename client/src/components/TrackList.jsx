@@ -6,7 +6,7 @@ const TrackList = props => {
   return (
     <div id='trackList'>
       <Container>
-        <Row>
+        <Row xl={10} lg={5} sm={2} xs={2}>
           {props.recs.tracks &&
             props.recs.tracks.map(t => (
               <Col key={t.id}>

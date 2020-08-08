@@ -1,4 +1,5 @@
 #trackList {
+  padding: 2rem 0;
   .container {
     display: flex;
     flex-direction: column;
@@ -6,6 +7,12 @@
     .row {
       display: flex;
       flex-direction: row;
+      .col {
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
     }
   }
 }

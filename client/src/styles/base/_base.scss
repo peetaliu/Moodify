@@ -6,3 +6,12 @@ body {
   font-family: 'Lato', sans-serif;
   text-align: center;
 }
+
+.cta-button {
+  padding: 1rem 1rem;
+  font-size: $default-font-size;
+  background-color: $spotify-green;
+  color: $spotify-white;
+  border-radius: 100px;
+  border: none;
+}

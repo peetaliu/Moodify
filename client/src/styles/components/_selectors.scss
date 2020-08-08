@@ -3,5 +3,10 @@
 
   .genreBoxes {
     flex-direction: row;
+    justify-content: center;
+  }
+
+  .slider {
+    color: $spotify-green;
   }
 }

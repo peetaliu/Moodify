@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
+import { Container } from 'react-bootstrap'
 import {
   Slider,
   Typography,
@@ -7,7 +8,6 @@ import {
   FormControl,
   FormGroup,
   FormControlLabel,
-  FormHelperText,
   Checkbox,
 } from '@material-ui/core'
 import { createRecs } from '../reducers/recsReducer'
@@ -51,48 +51,56 @@ const Selectors = props => {
 
   return (
     <div id='selectors'>
-      <Typography>Happiness</Typography>
-      <Slider
-        defaultValue={5}
-        step={1}
-        min={0}
-        max={10}
-        marks={[
-          { value: 0, label: 'Sad' },
-          { value: 10, label: 'Happy' },
-        ]}
-        onChange={(e, value) => {
-          setHappiness(value)
-        }}
-      />
-      <Typography>Energy</Typography>
-      <Slider
-        defaultValue={5}
-        step={1}
-        min={0}
-        max={10}
-        marks={[
-          { value: 0, label: 'Calm' },
-          { value: 10, label: 'Energetic' },
-        ]}
-        onChange={(e, value) => {
-          setEnergy(value)
-        }}
-      />
-      <Typography>Aggression</Typography>
-      <Slider
-        defaultValue={5}
-        step={1}
-        min={0}
-        max={10}
-        marks={[
-          { value: 0, label: 'Peaceful' },
-          { value: 10, label: 'Aggressive' },
-        ]}
-        onChange={(e, value) => {
-          setAggression(value)
-        }}
-      />
+      <Container>
+        <Typography>Happiness</Typography>
+        <Slider
+          className='slider'
+          defaultValue={1}
+          valueLabelDisplay='auto'
+          step={1}
+          min={1}
+          max={10}
+          marks={[
+            { value: 1, label: 'Sad' },
+            { value: 10, label: 'Happy' },
+          ]}
+          onChange={(e, value) => {
+            setHappiness(value)
+          }}
+        />
+        <Typography>Energy</Typography>
+        <Slider
+          className='slider'
+          defaultValue={1}
+          valueLabelDisplay='auto'
+          step={1}
+          min={1}
+          max={10}
+          marks={[
+            { value: 1, label: 'Calm' },
+            { value: 10, label: 'Energetic' },
+          ]}
+          onChange={(e, value) => {
+            setEnergy(value)
+          }}
+        />
+        <Typography>Aggression</Typography>
+        <Slider
+          className='slider'
+          defaultValue={1}
+          valueLabelDisplay='auto'
+          step={1}
+          min={1}
+          max={10}
+          marks={[
+            { value: 1, label: 'Peaceful' },
+            { value: 10, label: 'Aggressive' },
+          ]}
+          onChange={(e, value) => {
+            setAggression(value)
+          }}
+        />
+      </Container>
       <div>
         <FormControl component='fieldset'>
           <FormLabel component='legend'>Genres - Select up to 5</FormLabel>
@@ -108,8 +116,11 @@ const Selectors = props => {
         </FormControl>
       </div>
       <button
+        className='cta-button'
         onClick={handleSubmit}
-        disabled={selectedGen.length > 0 ? false : true}>
+        disabled={
+          selectedGen.length > 0 && selectedGen.length < 6 ? false : true
+        }>
         Get Playlist
       </button>
     </div>

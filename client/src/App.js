@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Find your mood</h1>
+      <h1>Moodify</h1>
       <Selectors />
       <TrackList />
     </div>

@@ -14,9 +14,9 @@ import { createRecs } from '../reducers/recsReducer'
 import { getAll, getPop } from '../reducers/genreReducer'
 
 const Selectors = props => {
-  const [happiness, setHappiness] = useState(5)
-  const [energy, setEnergy] = useState(5)
-  const [aggression, setAggression] = useState(5)
+  const [happiness, setHappiness] = useState(1)
+  const [energy, setEnergy] = useState(1)
+  const [aggression, setAggression] = useState(1)
   const [selectedGen, setSelectedGen] = useState([])
   const [allGenres, setAllGenres] = useState([])
   const [popGenres, setPopGenres] = useState([])

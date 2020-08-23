@@ -5,6 +5,8 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   text-align: center;
+  background-color: $spotify-gray;
+  color: $spotify-white;
 }
 
 .cta-button {
@@ -14,4 +16,8 @@ body {
   color: $spotify-white;
   border-radius: 100px;
   border: none;
+
+  &:disabled {
+    opacity: 50%;
+  }
 }

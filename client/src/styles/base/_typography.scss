@@ -35,11 +35,11 @@ a:hover {
 
 .text-color-main {
   -webkit-background-clip: text;
-  -webkit-text-fill-color: $spotify-black;
+  -webkit-text-fill-color: $spotify-white;
 
   @include respond(phone) {
     background-image: none;
-    -webkit-text-fill-color: $spotify-black;
+    -webkit-text-fill-color: $spotify-white;
   }
 
   &:hover {

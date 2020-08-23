@@ -8,6 +8,17 @@
       display: flex;
       flex-direction: row;
       .col {
+        padding-bottom: 10px;
+        .card-img {
+          width: 100%;
+          min-height: 196px;
+          object-fit: contain;
+        }
+        .artists {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+        }
         a {
           color: inherit;
           text-decoration: none;

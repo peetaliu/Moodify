@@ -18,9 +18,11 @@ const TrackList = props => {
                     <Card.Img src={t.album.images[1].url} />
                     <Card.Body>
                       <Card.Title>{t.name}</Card.Title>
-                      {t.artists.map(a => (
-                        <Card.Subtitle key={a.id}>{a.name}</Card.Subtitle>
-                      ))}
+                      <div className='artists'>
+                        {t.artists.map(a => (
+                          <Card.Subtitle key={a.id}>{a.name}</Card.Subtitle>
+                        ))}
+                      </div>
                     </Card.Body>
                   </Card>
                 </a>

@@ -10,8 +10,8 @@ import {
   FormControlLabel,
   Checkbox,
 } from '@material-ui/core'
-import { createRecs } from '../reducers/recsReducer'
-import { getAll, getPop } from '../reducers/genreReducer'
+import { createRecs } from '../../reducers/recsReducer'
+import { getAll, getPop } from '../../reducers/genreReducer'
 
 const Selectors = props => {
   const [happiness, setHappiness] = useState(1)
@@ -23,6 +23,8 @@ const Selectors = props => {
 
   useEffect(() => {
     setPopGenres(props.genres.map(g => g))
+    console.log('props', props)
+    setAllGenres(getAll(props.auth))
   }, [props.genres])
 
   const handleSubmit = () => {
@@ -44,15 +46,10 @@ const Selectors = props => {
     )
   }
 
-  const getAllGenres = () => {
-    props.getAll(props.auth)
-    setAllGenres(props.genres)
-  }
-
   return (
     <div id='selectors'>
       <Container>
-        <Typography>Happiness</Typography>
+        <Typography>Mood</Typography>
         <Slider
           className='slider'
           defaultValue={1}
@@ -84,7 +81,7 @@ const Selectors = props => {
             setEnergy(value)
           }}
         />
-        <Typography>Aggression</Typography>
+        <Typography>Ambience</Typography>
         <Slider
           className='slider'
           defaultValue={1}
@@ -103,7 +100,9 @@ const Selectors = props => {
       </Container>
       <div>
         <FormControl component='fieldset'>
-          <FormLabel component='legend'>Genres - Select up to 5</FormLabel>
+          <FormLabel component='legend' className='label'>
+            Genres - Select up to 5
+          </FormLabel>
           <FormGroup className='genreBoxes'>
             {popGenres.map(g => (
               <FormControlLabel

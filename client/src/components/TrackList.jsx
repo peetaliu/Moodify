@@ -19,9 +19,7 @@ const TrackList = props => {
                     <Card.Body>
                       <Card.Title>{t.name}</Card.Title>
                       <div className='artists'>
-                        {t.artists.map(a => (
-                          <Card.Subtitle key={a.id}>{a.name}</Card.Subtitle>
-                        ))}
+                        <Card.Subtitle>{t.artists[0].name}</Card.Subtitle>
                       </div>
                     </Card.Body>
                   </Card>

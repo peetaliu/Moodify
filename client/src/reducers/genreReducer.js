@@ -23,7 +23,7 @@ export const getAll = tok => {
   }
 }
 
-export const getPop = () => {
+export const getPopular = () => {
   return dispatch => {
     dispatch({
       type: 'POP',

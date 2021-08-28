@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { authenticate } from './reducers/authReducer'
-import { getPop } from './reducers/genreReducer'
-import Selectors from './components/Selectors'
+import { getPopular } from './reducers/genreReducer'
 import TrackList from './components/TrackList'
+import Selectors from './components/Selectors'
 
 const App = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(authenticate())
-    dispatch(getPop())
+    dispatch(getPopular())
   }, [dispatch])
 
   return (

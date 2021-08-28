@@ -10,8 +10,8 @@ import {
   FormControlLabel,
   Checkbox,
 } from '@material-ui/core'
-import { createRecs } from '../../reducers/recsReducer'
-import { getAll, getPop } from '../../reducers/genreReducer'
+import { createRecs } from '../reducers/recsReducer'
+import { getAll, getPopular } from '../reducers/genreReducer'
 
 const Selectors = props => {
   const [happiness, setHappiness] = useState(1)
@@ -136,7 +136,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
   createRecs,
   getAll,
-  getPop,
+  getPop: getPopular,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Selectors)
